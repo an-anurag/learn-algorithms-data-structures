@@ -7,8 +7,18 @@ def BinarySearch(lys, val):
         if lys[mid] == val:
             index = mid
         else:
-            if val<lys[mid]:
+            if val < lys[mid]:
                 last = mid -1
             else:
                 first = mid +1
     return index
+
+
+def linear_search(arr, element):
+    for i in range(len(arr)):
+        if arr[i] == element:
+            return True
+        return -1
+
+
+print(BinarySearch(sorted([2, 7, 89, 34, 9, 78, 23, 12]), 23))

@@ -1,7 +1,7 @@
 # Program to display the Fibonacci sequence up to n-th term where n is provided by the user
 
 # change this value for a different result
-nterms = 10
+nterms = 0
 
 # uncomment to take input from the user
 #nterms = int(input("How many terms? "))

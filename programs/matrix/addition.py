@@ -34,7 +34,7 @@ Y = [[5,8,1],
     [6,7,3],
     [4,5,9]]
 
-result = [[X[i][j] + Y[i][j]  for j in range(len(X[0]))] for i in range(len(X))]
+result = [[X[i][j] + Y[i][j] for j in range(len(X[0]))] for i in range(len(X))]
 
 for r in result:
    print(r)
