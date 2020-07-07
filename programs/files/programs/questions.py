@@ -11,7 +11,7 @@
 
 6. Write a Python program to read a file line by line store it into a variable.
 
-7. Write a Python program to read a file line by line store it into an array.
+7. Write a Python program to read a file line by line store it into an code_monk.
 
 8. Write a python program to find the longest words.
 
