@@ -1,6 +1,6 @@
 kilometers = 5.5
 
-# To take kilometers from the user, uncomment the programs below
+# To take kilometers from the user, uncomment the exercise below
 # kilometers = float(input("Enter value in kilometers"))
 
 # conversion factor
