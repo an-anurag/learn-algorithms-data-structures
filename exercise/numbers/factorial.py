@@ -32,3 +32,23 @@ else:
    for i in range(1, num + 1):
        factorial = factorial*i
    print("The factorial of",num,"is",factorial)
+
+
+n = 7
+mul = 1
+i = 1
+while i <= n:
+    mul *= i
+    i += 1
+print(mul)
+
+
+def f(num):
+    if num == 0:
+        return 0
+    elif num == 1:
+        return 1
+    else:
+        return f(num - 1) * num
+
+print(f(7))

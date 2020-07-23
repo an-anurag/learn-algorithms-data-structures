@@ -12,7 +12,7 @@ def print_factors(x):
 
 
 # change this value for a different result.
-num = 320
+num = 12
 
 # uncomment the following line to take input from the user
 # num = int(input("Enter a number: "))

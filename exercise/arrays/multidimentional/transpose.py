@@ -1,4 +1,4 @@
-# Program to transpose a matrix using nested loop
+# Program to transpose a multidimentional using nested loop
 
 X = [[12,7],
     [4 ,5],
@@ -18,7 +18,7 @@ for r in result:
 
 
 
-''' Program to transpose a matrix using list comprehension'''
+''' Program to transpose a multidimentional using list comprehension'''
 
 X = [[12,7],
     [4 ,5],
