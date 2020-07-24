@@ -28,6 +28,7 @@ def sel_sort(arr):
                 min_index = j
         arr[i], arr[min_index] = arr[min_index], arr[i]
 
+
 # Verify it works
 random_list_of_nums = [12, 8, 3, 20, 11]
 sel_sort(random_list_of_nums)
