@@ -12,8 +12,6 @@ n = 345289467
 print("Number of digits : % d" % (countDigit(n)))
 
 
-
-
 # Iterative Python program to count
 # number of digits in a number
 
@@ -28,8 +26,6 @@ def countDigit(n):
 # Driver Code
 n = 345289467
 print("Number of digits : % d" % (countDigit(n)))
-
-
 
 
 # Log based Python program to count number of
