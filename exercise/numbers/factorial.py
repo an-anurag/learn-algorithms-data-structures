@@ -19,7 +19,7 @@ def factorial(n):
 num = 7
 
 # uncomment to take input from the user
-#num = int(input("Enter a number: "))
+# num = int(input("Enter a number: "))
 
 factorial = 1
 
