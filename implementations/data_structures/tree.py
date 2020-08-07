@@ -1,73 +1,121 @@
-class TreeNode:
-    def __init__(self, val):
-        self.val = val
-        self.left = None
-        self.right = None
+"""
+Implement tree
+"""
+
+# approach 1:
+# with list of list in python
 
 
-# initialization of a tree
-rootNode = TreeNode(1)
-leftNode = TreeNode(2)
-rightNode = TreeNode(3)
-
-rootNode.left = leftNode
-rootNode.right = rightNode
+def BinaryTree(r):
+    return [r, [], []]
 
 
-# inorderTraversal of the tree (Left, Root, Right)
-def inorderTraversal(root):
-    result = []
-
-    if not root:
-        return self.result
-
-    def df(node: TreeNode):
-        if not node:
-            return
-        df(node.left)
-        result.append(node.val)
-        df(node.right)
-
-    df(root)
-    return result
+def insertLeft(root, newBranch):
+    t = root.pop(1)
+    if len(t) > 1:
+        root.insert(1,[newBranch,t,[]])
+    else:
+        root.insert(1,[newBranch, [], []])
+    return root
 
 
-# preorderTraversal of the tree (Root, Left, Right)
-def preorderTraversal(root):
-    result = []
-
-    if not root:
-        return result
-
-    def df(node: TreeNode):
-        if not node:
-            return
-        result.append(node.val)
-        df(node.left)
-        df(node.right)
-
-    df(root)
-    return result
+def insertRight(root,newBranch):
+    t = root.pop(2)
+    if len(t) > 1:
+        root.insert(2,[newBranch,[],t])
+    else:
+        root.insert(2,[newBranch,[],[]])
+    return root
 
 
-# postorderTraversal of the tree (Left, Right, Root)
-def postorderTraversal(root):
-    result = []
-
-    if not root:
-        return result
-
-    def df(node: TreeNode):
-        if not node:
-            return
-        df(node.left)
-        df(node.right)
-        result.append(node.val)
-
-    df(root)
-    return result
+def getRootVal(root):
+    return root[0]
 
 
-print('inorder: ', inorderTraversal(rootNode))
-print('preorder: ', preorderTraversal(rootNode))
-print('postorder: ', postorderTraversal(rootNode))
+def setRootVal(root,newVal):
+    root[0] = newVal
+
+
+def getLeftChild(root):
+    return root[1]
+
+
+def getRightChild(root):
+    return root[2]
+
+
+r = BinaryTree(4)
+print(r)
+insertLeft(r, 3)
+insertRight(r, 5)
+print(r)
+l = getLeftChild(r)
+r = getRightChild(r)
+print(l)
+print(r)
+
+
+# Approach 2: 
+# with OOP
+
+
+class BinaryTree:
+    
+    def __init__(self, node):
+        self.node = node
+        self.left_child = None
+        self.right_child = None
+        
+    def add_left_child(self, node):
+        
+        if self.left_child is None:
+            self.left_child = BinaryTree(node)
+        
+        else:
+            t = BinaryTree(node)
+            t.left_child = self.left_child
+            self.left_child = t
+            
+    def add_right_child(self, node):
+        
+        if self.right_child is None:
+            self.right_child = BinaryTree(node)
+        
+        else:
+            t = BinaryTree(node)
+            t.right_child = self.right_child
+            self.right_child = t
+
+    def get_left_child(self):
+        return self.left_child
+
+    def get_right_child(self):
+        return self.right_child
+
+    def set_root_node(self, node):
+        self.node = node
+
+    def get_root_val(self):
+        return self.node
+
+
+tree = BinaryTree('A')
+print(tree)
+root = tree.get_root_val()
+print(root)
+
+left_child = tree.get_left_child()
+print(left_child)
+right_child = tree.get_right_child()
+print(right_child)
+
+
+# after node added
+tree.add_left_child("B")
+tree.add_right_child("C")
+
+left_child = tree.get_left_child()
+print(left_child.get_root_val())
+
+right_child = tree.get_right_child()
+print(right_child.get_root_val())

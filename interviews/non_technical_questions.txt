@@ -1,0 +1,38 @@
+General Non Technical Interview Questions List
+Here is a general list of Non-Technical Questions. Make sure you answer a few of these during your phone screen mock interview (record yourself answering them!)
+Tell me about yourself?
+How did you hear about the position?
+What do you know about the company?
+What are your greatest professional strengths?
+What do you consider to be your weaknesses?
+What is your greatest professional achievement?
+Tell me about a challenge or conflict you've faced at work, and how you dealt with it.
+What other companies are you interviewing with?
+What are you looking for in a new position?
+What type of work environment do you prefer?
+What's your management style?
+What's a time you exercised leadership?
+What's a time you disagreed with a decision that was made at work?
+How would your boss and co-workers describe you?
+What do you want to do here?
+What is your favorite programming language?
+What is your work style?
+What can you tell me about your experience?
+What are your career goals?
+Why are you looking to change jobs?
+What salary are you expecting?
+What is your salary history?
+Why should we hire you?
+Why do you want to work for this company?
+If you could do anything, what would be your ideal job?
+Can you describe an environment or scenario where you would not thrive instantly?
+Apart from your technical expertise, why should we hire you?
+How do you keep yourself updated with the latest technologies and programming languages?
+When you can’t figure out how to solve a problem with your code, who do you turn to?
+What was the most difficult conflict you ever experienced with another colleague? How did you handle it?
+Are you currently working on any passion projects? What are you most proud of in these projects?
+What’s an example of a time you helped a non-technical person with a technical problem, and how did you explain it to them?
+Have you worked with QA (quality assurance) before? What were your feelings about it and how would you improve the process?
+Have you ever worked in a customer support or client facing role?
+What are your hobbies?
+What do you like about your current work environment, and what do you not like about it?
