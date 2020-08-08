@@ -14,15 +14,14 @@ def permute(my_string):
 
     while i < len(my_string):
         ch = my_string[i]
-        perm = my_string[i + 1:]
-        perm2 = my_string[:i]
-        temp_permute.append(perm)
-        temp_permute.append(perm2)
-
-        for item in temp_permute:
-            final_result.append(ch + item)
-
+        combination = my_string[:i] + my_string[i + 1:]
+        temp_permute.append(combination)
+        final_result.append(ch + combination)
         i += 1
+
+    # for ch in my_string:
+    #     for item in temp_permute:
+    #         final_result.append(ch + item)
 
     return final_result
 
