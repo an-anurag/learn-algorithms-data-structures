@@ -4,28 +4,23 @@ eg - abc --> abc, acb, bac, bca, cba, cab
 """
 
 
-def permute(my_string):
+def permute(s):
+    out = []
 
-    final_result = []
+    # Base Case
+    if len(s) == 1:
+        out = [s]
 
-    temp_permute = []
-    # base case
-    i = 0
+    else:
+        # For every letter in string
+        for i, let in enumerate(s):
 
-    while i < len(my_string):
-        ch = my_string[i]
-        combination = my_string[:i] + my_string[i + 1:]
-        temp_permute.append(combination)
-        final_result.append(ch + combination)
-        i += 1
+            # For every permutation resulting from Step 2 and 3 described above
+            for perm in permute(s[:i] + s[i + 1:]):
+                # Add it to output
+                out += [let + perm]
 
-    # for ch in my_string:
-    #     for item in temp_permute:
-    #         final_result.append(ch + item)
-
-    return final_result
+    return out
 
 
-print(permute("ABC"))
-
-
+print(permute('ABC'))
