@@ -23,4 +23,16 @@ def permute(s):
     return out
 
 
-print(permute('ABC'))
+# print(permute('ABC'))
+
+
+def permute_iter(s):
+    out = []
+
+    for i, ch in enumerate(s):
+        for j in range(len(s)):
+            perm = s[:j] + s[j + 1:]
+            print(perm)
+
+
+permute_iter('ABC')

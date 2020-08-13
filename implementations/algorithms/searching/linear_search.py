@@ -1,22 +1,51 @@
-def search(arr, x):
-    for i in range(len(arr)):
-        if arr[i] == x:
-            return i
-    return -1
+"""
+Implement linear/sequential search
+"""
 
 
-def binary_search(arr, element):
-    start = 0
-    end = len(arr) - 1
-    while start <= end:
-        mid = (start + end) // 2
-        if element == arr[mid]:
-            return mid
+# array is ordered
+
+def unorder_linear_search(arr, ele):
+    pos = 0
+    found = False
+
+    while pos < len(arr) and not found:
+
+        if arr[pos] == ele:
+            found = True
         else:
-            if element < arr[mid]:
-                end = mid - 1
+            pos += 1
+
+    return found
+
+
+a = [2, 5, 12, 43, 65, 78, 23, 8]
+print(unorder_linear_search(a, 3))
+
+
+# array is ordered
+
+def order_linear_search(arr, ele):
+    pos = 0
+    found = False
+    stopped = False
+
+    # edge case
+    if arr[0] > ele:
+        return False
+
+    while pos < len(arr) and not found and not stopped:
+
+        if arr[pos] == ele:
+            found = True
+        else:
+            if arr[pos] > ele:
+                stopped = True
             else:
-                start = mid + 1
+                pos += 1
+
+    return found
 
 
-print(binary_search(sorted([2, 7, 89, 34, 9, 78, 23, 12]), 23))
+a = [2, 5, 12, 43, 65, 78]
+print(order_linear_search(a, 43))
