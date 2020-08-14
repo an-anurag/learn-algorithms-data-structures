@@ -15,4 +15,4 @@ def solution(s):
     return s == s[::-1]
 
 
-solution(s)
+print(solution(s))
