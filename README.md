@@ -1,5 +1,6 @@
 # learn-algorithms-data-structures
 A complete algorithms and data structures course with code snippet in python
+This will help you to practice for coding interviews
 
 ## Code Challenges
 1. Hackerearth
@@ -30,3 +31,5 @@ A complete algorithms and data structures course with code snippet in python
     1. queue
     1. stack
     1. tree
+    
+## Riddles
