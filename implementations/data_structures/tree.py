@@ -119,3 +119,6 @@ print(left_child.get_root_val())
 
 right_child = tree.get_right_child()
 print(right_child.get_root_val())
+
+tree.add_left_child('D')
+print(tree.get_left_child())
