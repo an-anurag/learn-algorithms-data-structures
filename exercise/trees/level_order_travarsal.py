@@ -5,20 +5,41 @@ Main driver code for the assignment
 from implementations.data_structures.tree import BinaryTree
 import collections
 
-# create the desired binary tree
 
-"""
-            5
-          /   \
-         2     3
-        /       \
-       7         1
-      /          /\
-     9          4  6
-"""
+def levelOrderPrint(tree):
+    if not tree:
+        return
+    nodes = collections.deque([tree])
+    currentCount, nextCount = 1, 0
+    while len(nodes) != 0:
+        currentNode = nodes.popleft()
+        currentCount -= 1
+        print(currentNode.node, end=" ")
+        if currentNode.left_child:
+            nodes.append(currentNode.left_child)
+            nextCount += 1
+        if currentNode.right_child:
+            nodes.append(currentNode.right_child)
+            nextCount += 1
+        if currentCount == 0:
+            #finished printing current level
+            print()
+            currentCount, nextCount = nextCount, currentCount
 
 
-def create_tree():
+if __name__ == '__main__':
+    # create the desired binary tree
+
+    """
+                5
+              /   \
+             2     3
+            /       \
+           7         1
+          /          /\
+         9          4  6
+    """
+
     # level 1
     tree = BinaryTree(5)
 
@@ -39,34 +60,4 @@ def create_tree():
     one.add_left_child(4)
     one.add_right_child(6)
 
-    return tree
-
-t = create_tree()
-
-print(list(t))
-q = collections.deque([create_tree()])
-for i in q:
-    print(i)
-
-def levelOrderPrint(tree):
-    if not tree:
-        return
-    nodes=collections.deque([tree])
-    currentCount, nextCount = 1, 0
-    while len(nodes)!=0:
-        currentNode=nodes.popleft()
-        currentCount-=1
-        print(currentNode.node, end=" ")
-        if currentNode.left_child:
-            nodes.append(currentNode.left_child)
-            nextCount+=1
-        if currentNode.right_child:
-            nodes.append(currentNode.right_child)
-            nextCount+=1
-        if currentCount==0:
-            #finished printing current level
-            print()
-            currentCount, nextCount = nextCount, currentCount
-
-
-levelOrderPrint(create_tree())
+    levelOrderPrint(tree)

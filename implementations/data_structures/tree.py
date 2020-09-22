@@ -44,15 +44,15 @@ def getRightChild(root):
     return root[2]
 
 
-r = BinaryTree(4)
-print(r)
-insertLeft(r, 3)
-insertRight(r, 5)
-print(r)
-l = getLeftChild(r)
-r = getRightChild(r)
-print(l)
-print(r)
+# r = BinaryTree(4)
+# print(r)
+# insertLeft(r, 3)
+# insertRight(r, 5)
+# print(r)
+# l = getLeftChild(r)
+# r = getRightChild(r)
+# print(l)
+# print(r)
 
 
 # Approach 2: 
@@ -65,6 +65,9 @@ class BinaryTree:
         self.node = node
         self.left_child = None
         self.right_child = None
+
+    def __repr__(self):
+        return str(self.node)
         
     def add_left_child(self, node):
         
@@ -98,27 +101,27 @@ class BinaryTree:
     def get_root_val(self):
         return self.node
 
-
-tree = BinaryTree('A')
-print(tree)
-root = tree.get_root_val()
-print(root)
-
-left_child = tree.get_left_child()
-print(left_child)
-right_child = tree.get_right_child()
-print(right_child)
-
-
-# after node added
-tree.add_left_child("B")
-tree.add_right_child("C")
-
-left_child = tree.get_left_child()
-print(left_child.get_root_val())
-
-right_child = tree.get_right_child()
-print(right_child.get_root_val())
-
-tree.add_left_child('D')
-print(tree.get_left_child())
+#
+# tree = BinaryTree('A')
+# print(tree)
+# root = tree.get_root_val()
+# print(root)
+#
+# left_child = tree.get_left_child()
+# print(left_child)
+# right_child = tree.get_right_child()
+# print(right_child)
+#
+#
+# # after node added
+# tree.add_left_child("B")
+# tree.add_right_child("C")
+#
+# left_child = tree.get_left_child()
+# print(left_child.get_root_val())
+#
+# right_child = tree.get_right_child()
+# print(right_child.get_root_val())
+#
+# tree.add_left_child('D')
+# print(tree.get_left_child())
