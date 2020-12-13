@@ -34,10 +34,10 @@ def fib_series(num):
     n2 = 1
     counter = 0
     while counter < num:
-        if num < 0:
-            return -1
-        elif num == 1:
+        if num == 0:
             return 0
+        elif num == 1:
+            return 1
         else:
             print(n1, end="")
             next_num = n1 + n2
@@ -46,7 +46,7 @@ def fib_series(num):
             counter += 1
 
 
-# fib_series(5)
+fib_series(5)
 
 
 def fib_recur(num):

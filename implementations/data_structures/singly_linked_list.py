@@ -10,11 +10,14 @@ class Node:
         self.pointer = None
 
 
-a = Node(1)
-b = Node(2)
-c = Node(3)
+a = Node('A')
+b = Node('B')
+c = Node('C')
 
 a.pointer = b
 b.pointer = c
+c.pointer = a
 
 print(a.value, a.pointer.value, b.pointer.value, c.pointer)
+
+
