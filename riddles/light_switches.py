@@ -12,7 +12,6 @@ Although it is more on the "fun" side of brain teaser type questions.
 """
 
 
-
 """
 Solution
 This is a bit of a trick question and hopefully you don't get asked this type of question in an interview, 
