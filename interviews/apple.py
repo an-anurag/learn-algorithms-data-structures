@@ -7,7 +7,6 @@ sorted_given = sorted(given)
 print(sorted_given)
 
 seen = {}
-# import pdb; pdb.set_trace()
 for w in sorted_given:
     if w in seen:
         seen[w] += 1
